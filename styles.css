@@ -1,10 +1,12 @@
 :root {
   color-scheme: dark;
-  --bg: #0f172a;
-  --panel: #1e293b;
-  --card: #334155;
-  --text: #e2e8f0;
-  --accent: #22d3ee;
+  --bg: #a09ea0;
+  --bg-deep: #a09ea0;
+  --panel: rgba(120, 119, 122, 0.75);
+  --card: rgba(82, 82, 87, 0.88);
+  --text: #f2f2f2;
+  --accent: #131313;
+  --shape: #6f6e71;
 }
 
 * {
@@ -14,14 +16,25 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  background: linear-gradient(180deg, var(--bg), #020617);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(111, 110, 113, 0.4) 0, rgba(111, 110, 113, 0.4) 120px, transparent 121px),
+    radial-gradient(circle at 85% 30%, rgba(111, 110, 113, 0.3) 0, rgba(111, 110, 113, 0.3) 160px, transparent 161px),
+    radial-gradient(circle at 20% 80%, rgba(111, 110, 113, 0.34) 0, rgba(111, 110, 113, 0.34) 150px, transparent 151px),
+    radial-gradient(circle at 75% 75%, rgba(111, 110, 113, 0.26) 0, rgba(111, 110, 113, 0.26) 190px, transparent 191px),
+    linear-gradient(180deg, var(--bg), var(--bg-deep));
   color: var(--text);
   min-height: 100vh;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 1.5rem 2rem;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+.hero-logo {
+  width: min(280px, 70vw);
+  display: block;
+  margin: 0 auto 1.25rem;
 }
 
 .hero h1 {
@@ -32,13 +45,13 @@ body {
 .hero p {
   margin: 0 auto 1.5rem;
   max-width: 40rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .cta {
   display: inline-block;
   text-decoration: none;
-  color: #001018;
+  color: #ececec;
   background: var(--accent);
   font-weight: 700;
   padding: 0.75rem 1.25rem;
@@ -64,18 +77,19 @@ body {
 
 .product-card {
   background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.75rem;
   padding: 1rem;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  backdrop-filter: blur(2px);
 }
 
 .product-card:hover,
 .product-card:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  outline: 2px solid var(--accent);
+  outline: 2px solid #efefef;
 }
 
 .product-card h3 {
@@ -85,17 +99,17 @@ body {
 
 .product-card p {
   min-height: 3rem;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .price {
   font-weight: 700;
-  color: var(--accent);
+  color: #ffffff;
 }
 
 footer {
   text-align: center;
   padding: 1.5rem;
-  opacity: 0.75;
+  opacity: 0.82;
   font-size: 0.95rem;
 }
