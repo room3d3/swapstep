@@ -1,0 +1,101 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --card: #334155;
+  --text: #e2e8f0;
+  --accent: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #020617);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero p {
+  margin: 0 auto 1.5rem;
+  max-width: 40rem;
+  opacity: 0.9;
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  color: #001018;
+  background: var(--accent);
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.6rem;
+}
+
+.products {
+  padding: 1rem 1.5rem 3rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover,
+.product-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  outline: 2px solid var(--accent);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  min-height: 3rem;
+  opacity: 0.9;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
