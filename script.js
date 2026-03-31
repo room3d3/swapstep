@@ -1,4 +1,4 @@
-const rickrollUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+const rickrollUrl = "pandaman.png";
 
 for (const card of document.querySelectorAll(".product-card")) {
   card.addEventListener("click", () => {
